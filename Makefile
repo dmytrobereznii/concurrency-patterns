@@ -6,5 +6,5 @@ fmt:
 vet: fmt
 	go vet ./...
 
-run: vet
-	go run ./cmd
+fanin: vet
+	go run ./cmd/fanin

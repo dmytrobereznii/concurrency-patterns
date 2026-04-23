@@ -8,3 +8,6 @@ vet: fmt
 
 fanin: vet
 	go run ./cmd/fanin
+
+workerpool: vet
+	go run ./cmd/workerpool

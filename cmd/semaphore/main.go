@@ -1,3 +1,4 @@
+// The Semaphore is a synchronization mechanism used to control concurrent access to limited number of shared resources.
 package main
 
 import (

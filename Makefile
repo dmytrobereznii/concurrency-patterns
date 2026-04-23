@@ -14,3 +14,6 @@ workerpool: vet
 
 semaphore: vet
 	go run ./cmd/semaphore
+
+semaphore-doc:
+	go doc ./cmd/semaphore

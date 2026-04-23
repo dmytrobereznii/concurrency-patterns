@@ -1,3 +1,4 @@
+// The Worker Pool limits concurrency by spawning a fixed number of goroutines to process tasks from a shared channel.
 package main
 
 import (

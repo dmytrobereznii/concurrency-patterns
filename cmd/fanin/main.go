@@ -1,3 +1,5 @@
+// The Fan-In multiplexes multiple input channels into a single output channel.
+// The Fan-Out allows to use multiple goroutines to process tasks from a single input channel.
 package main
 
 import (

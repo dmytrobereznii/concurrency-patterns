@@ -7,15 +7,6 @@ import (
 	"time"
 )
 
-/**
-1. Create a fixed-size pool of N workers at startup (goroutines blocking on a
-  jobs channel)
-2. Accept jobs via a Submit(job) method — send into the jobs channel
-+ 3. Stop the jobs channel to signal workers to stop
-+ 4. Wait for all in-flight workers to finish (sync.WaitGroup)
-+ 5. Support context.Context cancellation — workers exit when ctx is done
-*/
-
 type job struct {
 	val int
 }

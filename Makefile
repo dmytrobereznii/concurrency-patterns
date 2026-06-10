@@ -20,3 +20,6 @@ semaphore: vet
 
 semaphore-doc:
 	go doc ./cmd/semaphore
+
+graceful:
+	go run ./cmd/gracefulshutdown

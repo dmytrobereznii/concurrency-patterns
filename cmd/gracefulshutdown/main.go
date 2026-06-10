@@ -28,22 +28,21 @@ func main() {
 		}
 	}()
 
-	select {
-	case <-ctx.Done():
-		fmt.Println("shutdown started")
+	<-ctx.Done()
 
-		ctxT, cancelT := context.WithTimeout(context.Background(), 2*time.Second)
-		defer cancelT()
+	fmt.Println("shutdown started")
 
-		for {
-			select {
-			case <-ctxT.Done():
-				fmt.Println("graceful shutdown timed out")
-				os.Exit(1)
-			case <-done:
-				fmt.Println("graceful shutdown completed")
-				return
-			}
+	ctxT, cancelT := context.WithTimeout(context.Background(), 2*time.Second)
+	defer cancelT()
+
+	for {
+		select {
+		case <-ctxT.Done():
+			fmt.Println("graceful shutdown timed out")
+			os.Exit(1)
+		case <-done:
+			fmt.Println("graceful shutdown completed")
+			return
 		}
 	}
 }

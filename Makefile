@@ -12,6 +12,9 @@ fanin: vet
 workerpool: vet
 	go run ./cmd/workerpool
 
+workerpool2: vet
+	go run ./cmd/workerpool2
+
 semaphore: vet
 	go run ./cmd/semaphore
 
